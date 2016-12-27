@@ -16,7 +16,7 @@ DESTDIR_FILES := $(foreach file,$(FILES),$(DESTDIR)/$(file))
 
 
 install:
-	@echo -n "Installing files... "
+	@echo "Installing files... "
 	@mkdir -p $(DESTDIR)/$(SYSCONFIG_DIR)
 	@mkdir -p $(DESTDIR)/$(SYSTEMD_UNITS_DIR)
 	@mkdir -p $(DESTDIR)/$(SBIN_DIR)
@@ -27,6 +27,6 @@ install:
 
 
 clean:
-	@echo -n "Cleaning files... $(DESTDIR_FILES)"
-	@rm -f $(DESTDIR_FILES)
+	@echo "Cleaning files..."
+	@rm -vf $(DESTDIR_FILES)
 	@echo "Finished!"
