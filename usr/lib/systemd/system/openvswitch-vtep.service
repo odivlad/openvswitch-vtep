@@ -1,0 +1,19 @@
+[Unit]
+Description=Open vSwitch-based VTEP emulator
+Before=network.target network.service
+After=network-pre.target
+Conflicts=openvswitch.service
+PartOf=network.target
+BindsTo=ovsdb-server-vtep.service
+BindsTo=ovs-vswitchd-vtep.service
+BindsTo=ovs-vtepd.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecReload=/bin/true
+ExecStop=/bin/true
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

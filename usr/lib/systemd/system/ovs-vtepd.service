@@ -1,0 +1,10 @@
+[Unit]
+Description=Open vSwitch-based VTEP emulator
+After=ovsdb-server-vtep.service ovs-vswitchd-vtep.service
+Requires=ovsdb-server-vtep.service ovs-vswitchd-vtep.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/sysconfig/openvswitch-vtep
+ExecStartPre=/usr/sbin/prepare-vtep-ctl
+ExecStart=/usr/share/openvswitch/scripts/ovs-vtep --log-file=/var/log/openvswitch/ovs-vtep.log --pidfile=/var/run/openvswitch/ovs-vtep.pid $VTEP_SWITCH_NAME

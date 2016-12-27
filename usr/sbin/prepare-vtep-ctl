@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+source /etc/sysconfig/openvswitch-vtep
+
+ovs-vsctl --may-exist add-br $VTEP_SWITCH_NAME
+for port in $VTEP_PORTS; do
+	ovs-vsctl --may-exist add-port $VTEP_SWITCH_NAME $port
+done
+vtep-ctl --may-exist add-ps $VTEP_SWITCH_NAME
+vtep-ctl set Physical_Switch $VTEP_SWITCH_NAME tunnel_ips=$TUNNEL_IPS

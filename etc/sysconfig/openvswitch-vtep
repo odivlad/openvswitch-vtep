@@ -1,0 +1,8 @@
+OVS_DB=/etc/openvswitch/conf.db
+VTEP_DB=/etc/openvswitch/vtep.db
+OVS_SCHEMA=/usr/share/openvswitch/vswitch.ovsschema
+VTEP_SCHEMA=/usr/share/openvswitch/vtep.ovsschema
+OVS_SOCK_DIR=/var/run/openvswitch
+
+VTEP_SWITCH_NAME=br0
+TUNNEL_IPS=192.168.56.13
