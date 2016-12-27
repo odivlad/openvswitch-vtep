@@ -3,7 +3,7 @@
 source /etc/sysconfig/openvswitch-vtep
 
 ovs-vsctl --may-exist add-br $VTEP_SWITCH_NAME
-for port in $VTEP_PORTS; do
+for port in $VTEP_PHYSYCAL_PORTS; do
 	ovs-vsctl --may-exist add-port $VTEP_SWITCH_NAME $port
 done
 vtep-ctl --may-exist add-ps $VTEP_SWITCH_NAME
