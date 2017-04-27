@@ -5,5 +5,5 @@ VTEP_SCHEMA=/usr/share/openvswitch/vtep.ovsschema
 OVS_SOCK_DIR=/var/run/openvswitch
 
 VTEP_SWITCH_NAME=br0
-VTEP_PHYSYCAL_PORTS=eth2 eth3 eth4 eth5
-TUNNEL_IPS=192.168.56.13
+VTEP_PHYSYCAL_PORTS=eth1
+TUNNEL_IPS=127.0.0.1
