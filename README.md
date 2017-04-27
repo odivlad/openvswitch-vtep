@@ -9,8 +9,19 @@ you can use VTEP.
 For testing and development of VTEP and SDN integrations.
 
 # How to?
+Install:
 ```
 git clone https://githib.com/odivlad/openvswitch-vtep.git
 cd openvswitch-vtep
 make install
+```
+
+Update (don't replace configs):
+```
+make update
+```
+
+Remove:
+```
+make clean
 ```
