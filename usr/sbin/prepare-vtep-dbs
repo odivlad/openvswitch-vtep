@@ -1,6 +1,0 @@
-#!/bin/sh -e
-
-source /etc/sysconfig/openvswitch-vtep
-
-test -e $OVS_DB || ovsdb-tool create $OVS_DB $OVS_SCHEMA
-test -e $VTEP_DB || ovsdb-tool create $VTEP_DB $VTEP_SCHEMA
